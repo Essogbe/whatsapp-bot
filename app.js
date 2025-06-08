@@ -6,7 +6,7 @@ const qrcode = require('qrcode-terminal');
 require('dotenv').config(); // Charger les variables d'environnement
 
 // Configuration de l'API FastAPI
-const FASTAPI_BASE_URL = 'http://localhost:8000';
+const FASTAPI_BASE_URL = process.env.FASTAPI_BASE_URL || 'http://localhost:8000';
 
 class WhatsAppBot {
     constructor() {
