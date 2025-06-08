@@ -13,6 +13,8 @@ Ce projet permet de créer un assistant IA sur WhatsApp qui peut :
 
 L'architecture est simple : les messages WhatsApp passent par un bot Node.js qui les transmet à une API Python FastAPI. L'IA (DSPy + Mistral) génère les réponses en utilisant l'historique des conversations et peut effectuer des recherches web automatiques. Pour des raisons de sécurité ou autre ( prompt injection, safety  etc), un filtre basique est placé avant et après le module de génération 
 
+## Diagramme
+
 ```mermaid
 flowchart TD
     A[🚀 Démarrage Bot WhatsApp] --> B[📋 Chargement variables environnement]
@@ -86,7 +88,7 @@ flowchart TD
     style FF fill:#e8f5e8
 
 ```
-### Aperçu visuel des filtres
+### Aperçu visuel du fonctionnement des  filtres
 
 ![alt text](image.png)
 
@@ -126,8 +128,8 @@ whatsapp-simple-bot/
 ## Installation
 
 ### Prérequis
-- Node.js (v16+)
-- Python (3.8+)
+- Node.js 
+- Python 3
 - Clé API Mistral (ou autre provider LLM)
 
 ### Setup
@@ -238,7 +240,9 @@ lm = dspy.LM('ollama_chat/llama3', api_base='http://localhost:11434')
 
 ## Améliorations prévues
 
+- Meilleure organisation des fichiers du projet
 - Support MCP pour plus de flexibilité et d'interopérabilité
+- Sécurité renforcée avec des filtres avancés ( voire [Guardrails AI](https://github.com/guardrails-ai/guardrails) par exemple  )
 - Langraph pour cas d'usage avancés
 - Transcription audio avec Whisper
 - Recherche Web Avancée
@@ -246,7 +250,7 @@ lm = dspy.LM('ollama_chat/llama3', api_base='http://localhost:11434')
 - Traitement de documents (PDF, Word)
 - Intégrations Google Calendar/Gmail
 - Recherche sémantique avancée
-- Traitement parallèle de tache chronophage avec RabbitMQ-Celery pour maintenir le bot fonctionnel et notifier lorsqu'une tache est terminée  
+- Traitement parallèle de tache chronophage avec RabbitMQ-Celery pour maintenir le bot fonctionnel et notifier lorsqu'une tache est terminée
 
 ## Avertissement
 
