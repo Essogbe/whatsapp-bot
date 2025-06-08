@@ -241,6 +241,7 @@ lm = dspy.LM('ollama_chat/llama3', api_base='http://localhost:11434')
 ## Améliorations prévues
 
 - Meilleure organisation des fichiers du projet
+- Endpoints FastAPI
 - Support MCP pour plus de flexibilité et d'interopérabilité
 - Sécurité renforcée avec des filtres avancés ( voire [Guardrails AI](https://github.com/guardrails-ai/guardrails) par exemple  )
 - Langraph pour cas d'usage avancés
