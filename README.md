@@ -252,6 +252,46 @@ lm = dspy.LM('ollama_chat/llama3', api_base='http://localhost:11434')
 - Recherche sémantique avancée
 - Traitement parallèle de tache chronophage avec RabbitMQ-Celery pour maintenir le bot fonctionnel et notifier lorsqu'une tache est terminée
 
+
+## À propos de Baileys
+
+ [Baileys](https://github.com/WhiskeySockets/Baileys) est une bibliothèque TypeScript/JavaScript qui permet d'interagir avec WhatsApp Web via WebSockets. Elle offre une alternative légère aux solutions basées sur Selenium ou l'automatisation de navigateur pour créer des bots et applications WhatsApp.
+
+### Caractéristiques principales
+
+- **Performance optimisée** : Consomme significativement moins de ressources qu'une solution basée navigateur (environ 500 Mo de RAM économisés)
+- **Connexion directe** : Communication via WebSocket avec les serveurs WhatsApp Web
+- **Support multi-appareils** : Compatible avec l'API multi-appareils de WhatsApp
+- **Authentification flexible** : QR code ou code de jumelage pour la connexion
+
+### Fonctionnalités supportées
+
+**Messagerie :**
+- Messages texte, images, vidéos, documents, audio
+- Messages avec mentions et réponses citées
+- Gestion des accusés de réception
+- Indicateurs de présence ("en train d'écrire", "en ligne")
+
+**Gestion des contacts et groupes :**
+- Informations sur les contacts et groupes
+- Métadonnées des messages (expéditeur, horodatage, etc.)
+- Administration des groupes (ajout/suppression de membres, permissions)
+
+**Authentification et sécurité :**
+- Sessions persistantes avec sauvegarde automatique
+- Reconnexion automatique en cas de déconnexion
+- Gestion des événements de connexion en temps réel
+
+### Installation
+
+```bash
+npm install @whiskeysockets/baileys
+```
+
+### Note importante
+
+Les mainteneurs découragent l'utilisation de Baileys pour des pratiques violant les conditions d'utilisation de WhatsApp, notamment le spam ou la messagerie automatisée en masse.
+
 ## Avertissement
 
 **ATTENTION :** Ce bot utilise l'API non-officielle WhatsApp via Baileys. Une utilisation intensive peut entraîner :
